@@ -33,27 +33,32 @@ app.use(express.static(path.join(__dirname, "public")));
   */
 app.get("/", async (req, res) => {
     const title = "Home";
-    res.render("home", { title });
+    const description = "Welcome to the CSE 340 Service Network, a platform connecting volunteers with organizations and projects.";
+    res.render("home", { title, description });
 })
 
 app.get("/organizations", async (req, res) => {
     const title = "Our Partner Organizations";
-    res.render("organizations", { title });
+    const description = "Discover the amazing organizations we partner with to make a difference in our community.";
+    res.render("organizations", { title, description });
 });
 
 app.get("/projects", async (req, res) => {
     const title = "Service Projects";
-    res.render("projects", { title });
+    const description = "Explore the various service projects we have available for volunteers to participate in.";
+    res.render("projects", { title, description });
 });
 
 app.get("/categories", async (req, res) => {
     const title = "Service Project Categories";
-    res.render("categories", { title });
+    const description = "Browse our service project categories to find opportunities that match your interests and skills.";
+    res.render("categories", { title, description });
 });
 
 // app.get("/volunteers", async (req, res) => {
 //     const title = "Volunteers";
-//     res.render("volunteers", { title });
+//     const description = "Learn more about our volunteer opportunities and how you can get involved.";
+//     res.render("volunteers", { title, description });
 // });
 
 app.listen(PORT, () => {
