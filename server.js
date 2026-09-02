@@ -51,10 +51,10 @@ app.get("/categories", async (req, res) => {
     res.render("categories", { title });
 });
 
-app.get("/volunteers", async (req, res) => {
-    const title = "Volunteers";
-    res.render("volunteers", { title });
-});
+// app.get("/volunteers", async (req, res) => {
+//     const title = "Volunteers";
+//     res.render("volunteers", { title });
+// });
 
 app.listen(PORT, () => {
     console.log(`Server is running at http://127.0.0.1:${PORT}`);
