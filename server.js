@@ -42,9 +42,11 @@ app.get("/", async (req, res) => {
 
 app.get("/organizations", async (req, res) => {
     const organizations = await getAllOrganizations();
+    console.log(organizations);
     const title = "Our Partner Organizations";
+    const description = "Discover the organizations we partner with to provide meaningful volunteer opportunities.";
 
-    res.render("organizations", { title, organizations});
+    res.render("organizations", { title, description, organizations });
 });
 
 app.get("/projects", async (req, res) => {
