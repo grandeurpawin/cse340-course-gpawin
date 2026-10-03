@@ -41,10 +41,14 @@ app.get("/", async (req, res) => {
 })
 
 app.get('/organizations', async (req, res) => {
+    console.log("I AM INSIDE THE ORGANIZATIONS ROUTE");
+
     const organizations = await getAllOrganizations();
-    console.log(organizations);
+
+    console.log("ORGANIZATIONS:", organizations);
 
     const title = 'Our Partner Organizations';
+
     res.render('organizations', { title, organizations });
 });
 
