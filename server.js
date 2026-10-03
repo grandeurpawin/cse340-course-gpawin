@@ -49,10 +49,10 @@ app.get('/organizations', async (req, res) => {
 });
 
 app.get("/projects", async (req, res) => {
+    const projects = await getAllProjects();
     const title = "Service Projects";
     const description = "Explore the various service projects we have available for volunteers to participate in.";
-    const projects = await getAllProjects();
-    console.log("Projects:", projects); // Log the projects to the console for debugging
+    
     res.render("projects", { title, description, projects });
 });
 
