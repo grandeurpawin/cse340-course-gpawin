@@ -4,7 +4,7 @@ import path from "path";
 import { testConnection } from "./src/models/db.js";
 import { getAllOrganizations } from "./src/models/organizations.js";
 import { getAllProjects } from "./src/models/project.js";
-import { getAllCategories } from "./src/models/categories.js";
+import { getAllCategories, getCategoriesWithProjects } from "./src/models/categories.js";
 
 
 // Define the application environment
@@ -59,10 +59,12 @@ app.get("/projects", async (req, res) => {
 
 app.get("/categories", async (req, res) => {
     const categories = await getAllCategories();
-
+    const categoriesWithProjects = await getCategoriesWithProjects();
+    console.log("Categories with Projects:", categoriesWithProjects);
+    
     const title = "Service Project Categories";
     const description = "Browse our service project categories to find opportunities that match your interests and skills.";
-    res.render("categories", { title, description, categories });
+    res.render("categories", { title, description, categories, categoriesWithProjects });
 });
 
 // app.get("/volunteers", async (req, res) => {
