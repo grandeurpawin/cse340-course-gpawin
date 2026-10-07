@@ -9,7 +9,7 @@
                 <li>
                     <%= new Date(project.date).toLocaleDateString('en-US', { year: 'numeric' , month: 'long' ,
                         day: 'numeric' }) %>:
-                        <a href="/project/<%= project.id %>">
+                        <a href="/project/<%= project.project_id %>">
                             <%= project.title %>
                         </a>
                         (
