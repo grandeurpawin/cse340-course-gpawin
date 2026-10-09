@@ -31,3 +31,11 @@
             <!-- <li><a href="/volunteers">Volunteers</a></li> -->
         </ul>
     </nav>
+    <% const messages = flash(); %>
+    <% Object.keys(messages). forEach(type = > { %>
+        <% if (messages[type].length > 0) { 5>
+            <% messages[type].forEach(msg => { %>
+                <%= msg %>
+            <% }; %>)
+       <% } %>
+   <% }); %>
