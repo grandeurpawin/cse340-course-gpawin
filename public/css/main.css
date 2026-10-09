@@ -349,28 +349,6 @@ main form[action="/new-organization"] button[type="submit"]:focus-visible {
     outline-offset: 3px;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 500px) {
-    main form[action="/new-organization"] {
-        padding: 22px 18px;
-    }
-
-    main form[action="/new-organization"] button[type="submit"] {
-        width: 100%;
-        min-height: 48px;
-    }
-}
-
-/* Reduced motion accessibility */
-@media (prefers-reduced-motion: reduce) {
-
-    main form[action="/new-organization"] input,
-    main form[action="/new-organization"] textarea,
-    main form[action="/new-organization"] button[type="submit"] {
-        transition: none;
-    }
-}
-
 
 /* =========================================
    FOOTER
@@ -430,6 +408,11 @@ a:focus-visible {
     *::after {
         transition: none !important;
         animation: none !important;
+    }
+    main form[action="/new-organization"] input,
+    main form[action="/new-organization"] textarea,
+    main form[action="/new-organization"] button[type="submit"] {
+        transition: none;
     }
 }
 
@@ -585,6 +568,14 @@ a:focus-visible {
 
     .category {
         padding: 20px;
+    }
+
+    main form[action="/new-organization"] {
+        padding: 22px 18px;
+    }
+    main form[action="/new-organization"] button[type="submit"] {
+        width: 100%;
+        min-height: 48px;
     }
 
 
