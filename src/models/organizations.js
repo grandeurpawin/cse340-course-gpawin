@@ -1,4 +1,3 @@
-import { name } from "ejs";
 import db from "./db.js";
 
 const getAllOrganizations = async () => {
@@ -66,7 +65,7 @@ const updateOrganization = async (organizationId, name, description, contact_ema
     if (process.env.ENABLE_SQL_LOGGING === "true") {
         console.log("Updated organization with ID:", organizationId);
     }
-    return result.rows[0].organizationId
+    return result.rows[0].organization_id
 };
 
 export { getAllOrganizations, getOrganizationDetails, createOrganization, updateOrganization };
