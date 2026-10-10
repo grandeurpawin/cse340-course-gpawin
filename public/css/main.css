@@ -278,7 +278,8 @@ main>ul>li {
    ========================================= */
 
 main form[action="/new-organization"],
-main form[action^="/edit-organization"] {
+main form[action^="/edit-organization"],
+main form[action="/new-project"] {
     max-width: 750px;
     margin: 30px auto;
     padding: 35px;
@@ -289,7 +290,8 @@ main form[action^="/edit-organization"] {
 }
 
 main form[action="/new-organization"] .form-group,
-main form[action^="/edit-organization"] .form-group {
+main form[action^="/edit-organization"] .form-group,
+main form[action="/new-project"] .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -297,7 +299,8 @@ main form[action^="/edit-organization"] .form-group {
 }
 
 main form[action="/new-organization"] label,
-main form[action^="/edit-organization"] label {
+main form[action^="/edit-organization"] label,
+main form[action="/new-project"] label {
     color: #173f35;
     font-weight: 600;
 }
@@ -305,7 +308,9 @@ main form[action^="/edit-organization"] label {
 main form[action="/new-organization"] input,
 main form[action="/new-organization"] textarea,
 main form[action^="/edit-organization"] input,
-main form[action^="/edit-organization"] textarea {
+main form[action^="/edit-organization"] textarea,
+main form[action="/new-project"] input,
+main form[action="/new-project"] textarea {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #cbd5cf;
@@ -319,7 +324,8 @@ main form[action^="/edit-organization"] textarea {
 }
 
 main form[action="/new-organization"] textarea,
-main form[action^="/edit-organization"] textarea {
+main form[action^="/edit-organization"] textarea,
+main form[action="/new-project"] textarea {
     min-height: 130px;
     resize: vertical;
 }
@@ -327,14 +333,17 @@ main form[action^="/edit-organization"] textarea {
 main form[action="/new-organization"] input:focus,
 main form[action="/new-organization"] textarea:focus,
 main form[action^="/edit-organization"] input:focus,
-main form[action^="/edit-organization"] textarea:focus {
+main form[action^="/edit-organization"] textarea:focus,
+main form[action="/new-project"] input:focus,
+main form[action="/new-project"] textarea:focus {
     outline: none;
     border-color: #2d6a58;
     box-shadow: 0 0 0 3px rgba(45, 106, 88, 0.15);
 }
 
 main form[action="/new-organization"] button[type="submit"],
-main form[action^="/edit-organization"] button[type="submit"] {
+main form[action^="/edit-organization"] button[type="submit"],
+main form[action="/new-project"] button[type="submit"] {
     display: inline-block;
     padding: 12px 24px;
     border: 2px solid #173f35;
@@ -349,13 +358,15 @@ main form[action^="/edit-organization"] button[type="submit"] {
 }
 
 main form[action="/new-organization"] button[type="submit"]:hover,
-main form[action^="/edit-organization"] button[type="submit"]:hover {
+main form[action^="/edit-organization"] button[type="submit"]:hover,
+main form[action="/new-project"] button[type="submit"]:hover {
     background-color: #2d6a58;
     border-color: #2d6a58;
 }
 
 main form[action="/new-organization"] button[type="submit"]:focus-visible,
-main form[action^="/edit-organization"] button[type="submit"]:focus-visible {
+main form[action^="/edit-organization"] button[type="submit"]:focus-visible,
+main form[action="/new-project"] button[type="submit"]:focus-visible {
     outline: 3px solid #f4c95d;
     outline-offset: 3px;
 }
@@ -458,7 +469,10 @@ a:focus-visible {
     main form[action="/new-organization"] button[type="submit"],
     main form[action^="/edit-organization"] input,
     main form[action^="/edit-organization"] textarea,
-    main form[action^="/edit-organization"] button[type="submit"] {
+    main form[action^="/edit-organization"] button[type="submit"],
+    main form[action="/new-project"] input,
+    main form[action="/new-project"] textarea,
+    main form[action="/new-project"] button[type="submit"] {
         transition: none;
     }
 }
@@ -618,11 +632,13 @@ a:focus-visible {
     }
 
     main form[action="/new-organization"],
-    main form[action^="/edit-organization"] {
+    main form[action^="/edit-organization"],
+    main form[action="/new-project"] {
         padding: 22px 18px;
     }
     main form[action="/new-organization"] button[type="submit"],
-    main form[action^="/edit-organization"] button[type="submit"] {
+    main form[action^="/edit-organization"] button[type="submit"],
+    main form[action="/new-project"] button[type="submit"] {
         width: 100%;
         min-height: 48px;
     }
