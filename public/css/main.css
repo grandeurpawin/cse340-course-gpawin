@@ -279,7 +279,8 @@ main>ul>li {
 
 main form[action="/new-organization"],
 main form[action^="/edit-organization"],
-main form[action="/new-project"] {
+main form[action="/new-project"],
+main form[action^="/assign-categories"] {
     max-width: 750px;
     margin: 30px auto;
     padding: 35px;
@@ -300,7 +301,8 @@ main form[action="/new-project"] .form-group {
 
 main form[action="/new-organization"] label,
 main form[action^="/edit-organization"] label,
-main form[action="/new-project"] label {
+main form[action="/new-project"] label,
+main form[action^="/assign-categories"] label {
     color: #173f35;
     font-weight: 600;
 }
@@ -345,7 +347,8 @@ main form[action="/new-project"] select:focus {
 
 main form[action="/new-organization"] button[type="submit"],
 main form[action^="/edit-organization"] button[type="submit"],
-main form[action="/new-project"] button[type="submit"] {
+main form[action="/new-project"] button[type="submit"],
+main form[action^="/assign-categories"] button[type="submit"] {
     display: inline-block;
     padding: 12px 24px;
     border: 2px solid #173f35;
@@ -361,16 +364,35 @@ main form[action="/new-project"] button[type="submit"] {
 
 main form[action="/new-organization"] button[type="submit"]:hover,
 main form[action^="/edit-organization"] button[type="submit"]:hover,
-main form[action="/new-project"] button[type="submit"]:hover {
+main form[action="/new-project"] button[type="submit"]:hover,
+main form[action^="/assign-categories"] button[type="submit"]:hover {
     background-color: #2d6a58;
     border-color: #2d6a58;
 }
 
 main form[action="/new-organization"] button[type="submit"]:focus-visible,
 main form[action^="/edit-organization"] button[type="submit"]:focus-visible,
-main form[action="/new-project"] button[type="submit"]:focus-visible {
+main form[action="/new-project"] button[type="submit"]:focus-visible,
+main form[action^="/assign-categories"] button[type="submit"]:focus-visible {
     outline: 3px solid #f4c95d;
     outline-offset: 3px;
+}
+
+main form[action^="/assign-categories/"] input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #2d6a58;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Category Rows */
+main form[action^="/assign-categories/"] .form-group>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 
@@ -474,7 +496,9 @@ a:focus-visible {
     main form[action^="/edit-organization"] button[type="submit"],
     main form[action="/new-project"] input,
     main form[action="/new-project"] textarea,
-    main form[action="/new-project"] button[type="submit"] {
+    main form[action="/new-project"] button[type="submit"],
+    main form[action^="/assign-categories"] input,
+    main form[action^="/assign-categories"] button[type="submit"] {
         transition: none;
     }
 }
@@ -635,12 +659,14 @@ a:focus-visible {
 
     main form[action="/new-organization"],
     main form[action^="/edit-organization"],
-    main form[action="/new-project"] {
+    main form[action="/new-project"],
+    main form[action^="/assign-categories"] {
         padding: 22px 18px;
     }
     main form[action="/new-organization"] button[type="submit"],
     main form[action^="/edit-organization"] button[type="submit"],
-    main form[action="/new-project"] button[type="submit"] {
+    main form[action="/new-project"] button[type="submit"],
+    main form[action^="/assign-categories"] button[type="submit"] {
         width: 100%;
         min-height: 48px;
     }
