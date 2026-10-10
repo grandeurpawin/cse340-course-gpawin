@@ -1,3 +1,4 @@
+import { name } from "ejs";
 import db from "./db.js";
 
 const getAllOrganizations = async () => {
@@ -47,4 +48,25 @@ const createOrganization = async (name, description, contact_email, logo_filenam
     return result.rows[0].organization_id;
 };
 
-export { getAllOrganizations, getOrganizationDetails, createOrganization };
+const updateOrganization = async (organizationId, name, description, contact_email, logoFilename) => {
+    const query = `
+    UPDATE organization
+    SET name = $1, description = $2, contactEmail = $3, logoFilename = $4
+    WHERE organization_id = $5
+    RETURNING organization_id;
+    `;
+
+    const queryParams = [name, description, contact_email, logoFilename, organizationId];
+    const result = await db.query(query, queryParams);
+
+    if (result.rows.length === 0) {
+        throw new Error("Organization not found");
+    }
+
+    if (process.env.ENABLE_SQL_LOGGING === "true") {
+        console.log("Updated organization with ID:", organizationId);
+    }
+    return result.rows[0].organizationId
+};
+
+export { getAllOrganizations, getOrganizationDetails, createOrganization, updateOrganization };
