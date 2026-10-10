@@ -51,7 +51,7 @@ const createOrganization = async (name, description, contact_email, logo_filenam
 const updateOrganization = async (organizationId, name, description, contact_email, logoFilename) => {
     const query = `
     UPDATE organization
-    SET name = $1, description = $2, contactEmail = $3, logoFilename = $4
+    SET name = $1, description = $2, contact_email = $3, logo_filename = $4
     WHERE organization_id = $5
     RETURNING organization_id;
     `;

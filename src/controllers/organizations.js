@@ -81,7 +81,7 @@ const showEditOrganizationForm = async (req, res) => {
 };
 
 const processEditOrganizationForm = async (req, res) => {
-    const organization = req.params.id;
+    const organizationId = req.params.id;
     const { name, description, contactEmail, logoFilename } = req.body;
 
     await updateOrganization(organizationId, name, description, contactEmail, logoFilename);
