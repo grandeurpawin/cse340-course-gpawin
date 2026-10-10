@@ -40,7 +40,7 @@ const processNewProjectForm = async (req, res) => {
         //Create the new project in the database
         const newProjectId = await createProject(title, description, location, date, organizationId);
 
-        req.flash(("success", "New service project created successfully!"));
+        req.flash("success", "New service project created successfully!");
         res.redirect(`/project/${newProjectId}`);
     } catch (error) {
         console.error("Error creating new project:", error);

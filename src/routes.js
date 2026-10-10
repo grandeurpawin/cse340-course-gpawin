@@ -13,7 +13,7 @@ import { organizationValidation } from "./controllers/organizations.js";
 import { showEditOrganizationForm } from "./controllers/organizations.js";
 import { processEditOrganizationForm } from "./controllers/organizations.js";
 import { showNewProjectForm } from "./controllers/projects.js";
-import { processNewProjectForm } from "./controllers/organizations.js";
+import { processNewProjectForm } from "./controllers/projects.js";
 
 const router = express.Router();
 
