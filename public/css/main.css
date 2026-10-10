@@ -277,7 +277,8 @@ main>ul>li {
    NEW ORGANIZATION FORM
    ========================================= */
 
-main form[action="/new-organization"] {
+main form[action="/new-organization"],
+main form[action="/edit-orgazization"] {
     max-width: 750px;
     margin: 30px auto;
     padding: 35px;
@@ -287,20 +288,24 @@ main form[action="/new-organization"] {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
-main form[action="/new-organization"] .form-group {
+main form[action="/new-organization"] .form-group,
+main form[action="/edit-organization"] .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 22px;
 }
 
-main form[action="/new-organization"] label {
+main form[action="/new-organization"],
+main form[action="/edit-organization"] label {
     color: #173f35;
     font-weight: 600;
 }
 
 main form[action="/new-organization"] input,
-main form[action="/new-organization"] textarea {
+main form[action="/new-organization"] textarea,
+main form[action="/edit-organization"] input,
+main form[action="/edit-organization"] textarea {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #cbd5cf;
@@ -313,19 +318,23 @@ main form[action="/new-organization"] textarea {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-main form[action="/new-organization"] textarea {
+main form[action="/new-organization"] textarea,
+main form[action="/edit-organization"] textarea {
     min-height: 130px;
     resize: vertical;
 }
 
 main form[action="/new-organization"] input:focus,
-main form[action="/new-organization"] textarea:focus {
+main form[action="/new-organization"] textarea:focus,
+main form[action="/edit-organization"] input:focus,
+main form[action="/edit-organization"] textarea:focus {
     outline: none;
     border-color: #2d6a58;
     box-shadow: 0 0 0 3px rgba(45, 106, 88, 0.15);
 }
 
-main form[action="/new-organization"] button[type="submit"] {
+main form[action="/new-organization"] button[type="submit"],
+main form[action="/edit-organization"] button[type="submit"] {
     display: inline-block;
     padding: 12px 24px;
     border: 2px solid #173f35;
@@ -339,12 +348,14 @@ main form[action="/new-organization"] button[type="submit"] {
     transition: background-color 0.2s ease;
 }
 
-main form[action="/new-organization"] button[type="submit"]:hover {
+main form[action="/new-organization"] button[type="submit"]:hover,
+main form[action="/edit-organization"] button[type="submit"]:hover {
     background-color: #2d6a58;
     border-color: #2d6a58;
 }
 
-main form[action="/new-organization"] button[type="submit"]:focus-visible {
+main form[action="/new-organization"] button[type="submit"]:focus-visible,
+main form[action="/edit-organization"] button[type="submit"]:focus-visible {
     outline: 3px solid #f4c95d;
     outline-offset: 3px;
 }
@@ -444,7 +455,10 @@ a:focus-visible {
     }
     main form[action="/new-organization"] input,
     main form[action="/new-organization"] textarea,
-    main form[action="/new-organization"] button[type="submit"] {
+    main form[action="/new-organization"] button[type="submit"],
+    main form[action="/edit-organization"] input,
+    main form[action="/edit-organization"] textarea,
+    main form[action="/edit-organization"] button[type="submit"] {
         transition: none;
     }
 }
@@ -603,10 +617,12 @@ a:focus-visible {
         padding: 20px;
     }
 
-    main form[action="/new-organization"] {
+    main form[action="/new-organization"],
+    main form[action="/edit-organization"] {
         padding: 22px 18px;
     }
-    main form[action="/new-organization"] button[type="submit"] {
+    main form[action="/new-organization"] button[type="submit"],
+    main form[action="/edit-organization"] button[type="submit"] {
         width: 100%;
         min-height: 48px;
     }
