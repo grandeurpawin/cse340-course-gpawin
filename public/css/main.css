@@ -373,6 +373,11 @@ main form[action="/new-project"] button[type="submit"]:focus-visible {
     outline-offset: 3px;
 }
 
+main form[action="/new-project"] select {
+    padding-right: 35px;
+    cursor: pointer;
+}
+
 
 /* Flash message styles */
 .alert {
