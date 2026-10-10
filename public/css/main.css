@@ -310,7 +310,8 @@ main form[action="/new-organization"] textarea,
 main form[action^="/edit-organization"] input,
 main form[action^="/edit-organization"] textarea,
 main form[action="/new-project"] input,
-main form[action="/new-project"] textarea {
+main form[action="/new-project"] textarea,
+main form[action="/new-project"] select {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #cbd5cf;
@@ -335,7 +336,8 @@ main form[action="/new-organization"] textarea:focus,
 main form[action^="/edit-organization"] input:focus,
 main form[action^="/edit-organization"] textarea:focus,
 main form[action="/new-project"] input:focus,
-main form[action="/new-project"] textarea:focus {
+main form[action="/new-project"] textarea:focus,
+main form[action="/new-project"] select:focus {
     outline: none;
     border-color: #2d6a58;
     box-shadow: 0 0 0 3px rgba(45, 106, 88, 0.15);
