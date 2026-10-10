@@ -40,7 +40,7 @@ const processAssignCategoriesForm = async (req, res) => {
     const categoryIdsArray = Array.isArray(selectedCategoryIds) ? selectedCategoryIds : [selectedCategoryIds];
     await updateCategoryAssignments(projectId, categoryIdsArray);
     req.flash("success", "Categories updated successfully.");
-    res.redirect(`project/${projectId}`);
+    res.redirect(`/project/${projectId}`);
 
 };
 
