@@ -3,6 +3,7 @@ import { getCategoriesByProjectId } from "../models/categories.js";
 import { createProject } from "../models/project.js";
 import { getAllOrganizations } from "../models/organizations.js";
 import { body, validationResult } from "express-validator";
+import {  }
 
 const projectValidation = [
     body('title')
