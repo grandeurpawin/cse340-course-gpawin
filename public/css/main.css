@@ -318,7 +318,8 @@ main form[action="/new-project"] input,
 main form[action="/new-project"] textarea,
 main form[action="/new-project"] select,
 main form[action^="/edit-project"] input,
-main form[action^="/edit-project"] textarea {
+main form[action^="/edit-project"] textarea,
+main form[action^="/edit-project"] select {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #cbd5cf;
