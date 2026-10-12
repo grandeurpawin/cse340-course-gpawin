@@ -118,7 +118,7 @@ const updateProject = async (id, title, description, location, date, organizatio
     date = $4,
     organization_id = $5
     WHERE project_id =$6
-    RETURNINNG project_id;
+    RETURNING project_id;
     `;
 
     const queryParams = [title, description, location, date, organizationId, id];
