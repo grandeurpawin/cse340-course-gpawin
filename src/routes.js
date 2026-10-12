@@ -1,23 +1,35 @@
 import express from "express";
 
 import { showHomePage } from "./controllers/index.js";
-import { showOrganizationsPage } from "./controllers/organizations.js";
-import { showProjectsPage } from "./controllers/projects.js";
-import { showCategoriesPage, showCategoryDetailsPage } from "./controllers/categories.js";
+import {
+    showOrganizationsPage,
+    showOrganizationDetailsPage,
+    showNewOrganizationForm,
+    processNewOrganizationForm,
+    organizationValidation,
+    showEditOrganizationForm,
+    processEditOrganizationForm,
+} from "./controllers/organizations.js";
+import {
+    showProjectsPage,
+    showProjectDetailsPage,
+    showNewProjectForm,
+    processNewProjectForm,
+    projectValidation,
+    showEditProjectForm,
+    processEditProjectForm
+ } from "./controllers/projects.js";
+import {
+    showCategoriesPage,
+    showCategoryDetailsPage,
+    showAssignCategoriesForm,
+    processAssignCategoriesForm,
+    categoryValidation, showNewCategoryForm,
+    processNewCategoryForm,
+    showEditCategoryForm,
+    processEditCategoryForm
+} from "./controllers/categories.js";
 import { testErrorPage } from "./controllers/errors.js";
-import { showOrganizationDetailsPage } from "./controllers/organizations.js";
-import { showProjectDetailsPage } from "./controllers/projects.js";
-import { showNewOrganizationForm } from "./controllers/organizations.js";
-import { processNewOrganizationForm } from "./controllers/organizations.js";
-import { organizationValidation } from "./controllers/organizations.js";
-import { showEditOrganizationForm } from "./controllers/organizations.js";
-import { processEditOrganizationForm } from "./controllers/organizations.js";
-import { showNewProjectForm } from "./controllers/projects.js";
-import { processNewProjectForm } from "./controllers/projects.js";
-import { projectValidation } from "./controllers/projects.js"; 
-import { showAssignCategoriesForm, processAssignCategoriesForm } from "./controllers/categories.js";
-import { showEditProjectForm } from "./controllers/projects.js";
-import { processEditProjectForm } from "./controllers/projects.js";
 
 const router = express.Router();
 
@@ -39,6 +51,10 @@ router.get("/assign-categories/:projectId", showAssignCategoriesForm);
 router.post("/assign-categories/:projectId", processAssignCategoriesForm);
 router.get("/edit-project/:id", showEditProjectForm);
 router.post("/edit-project/:id", projectValidation, processEditProjectForm);
+router.get("/new-category", showNewCategoryForm);
+router.post("/new-category", categoryValidation, processNewCategoryForm);
+router.get("/edit-category/:id", showEditCategoryForm);
+router.post("/edit-category/:id", categoryValidation, processEditCategoryForm);
 // Error-handling routes
 router.get("/test-error", testErrorPage);
 
