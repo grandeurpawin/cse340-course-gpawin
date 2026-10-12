@@ -16,6 +16,8 @@ import { showNewProjectForm } from "./controllers/projects.js";
 import { processNewProjectForm } from "./controllers/projects.js";
 import { projectValidation } from "./controllers/projects.js"; 
 import { showAssignCategoriesForm, processAssignCategoriesForm } from "./controllers/categories.js";
+import { showEditProjectForm } from "./controllers/projects.js";
+import { processEditProjectForm } from "./controllers/organizations.js";
 
 const router = express.Router();
 
@@ -35,6 +37,8 @@ router.get("/new-project", showNewProjectForm);
 router.post("/new-project", projectValidation, processNewProjectForm);
 router.get("/assign-categories/:projectId", showAssignCategoriesForm);
 router.post("/assign-categories/:projectId", processAssignCategoriesForm);
+router.get("/edit-project:id", showEditProjectForm);
+router.post("/edit-project:id", projectValidation, processEditProjectForm);
 // Error-handling routes
 router.get("/test-error", testErrorPage);
 
