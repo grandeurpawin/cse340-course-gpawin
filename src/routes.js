@@ -35,7 +35,7 @@ import {
     showLoginForm,
     processLoginForm,
     processLogout
-} from "./controllers/users.js";
+} from "./models/users.js";
 
 const router = express.Router();
 
