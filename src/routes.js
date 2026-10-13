@@ -30,12 +30,13 @@ import {
     processEditCategoryForm
 } from "./controllers/categories.js";
 import { testErrorPage } from "./controllers/errors.js";
-import { showUserRegistrationForm, processUserRegistrationForm } from "./controllers/users.js";
 import {
+    showUserRegistrationForm,
+    processUserRegistrationForm,
     showLoginForm,
     processLoginForm,
     processLogout
-} from "./models/users.js";
+} from "./controllers/users.js";
 
 const router = express.Router();
 
