@@ -11,7 +11,9 @@
     </main>
 
     <% if (isLoggedIn) { %>
-        <p><a href="/dashboard">My Dashboard</a></p>
+        <p class="dashboard-link-container">
+            <a class="dashboard-link" href="/dashboard">My Dashboard</a>
+        </p>
         <% } %>
     
 <%- include('partials/footer') %>

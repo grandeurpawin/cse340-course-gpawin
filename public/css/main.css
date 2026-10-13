@@ -285,7 +285,8 @@ main form[action^="/edit-project/"],
 main form[action="/new-category"],
 main form[action^="/edit-category/"],
 main form[action="/register"],
-main form[action="/login"] {
+main form[action="/login"],
+.dashboard-form {
     max-width: 750px;
     margin: 30px auto;
     padding: 35px;
@@ -472,7 +473,8 @@ main a[href^="/assign-categories/"]:hover,
 main a[href="/new-category"]:hover,
 main a[href^="/edit-category/"]:hover,
 main a[href="/register"]:hover,
-main a[href="/login"]:hover {
+main a[href="/login"]:hover,
+.dashboard-link:hover {
     background-color: #2d6a58;
     border-color: #2d6a58;
     color: #ffffff;
@@ -487,7 +489,8 @@ main a[href^="/assign-categories/"]:focus-visible,
 main a[href="/new-category"]:focus-visible,
 main a[href^="/edit-category/"]:focus-visible,
 main a[href="/register"]:focus-visible,
-main a[href="/login"]:focus-visible {
+main a[href="/login"]:focus-visible,
+.dashboard-link:focus-visible {
     outline: 3px solid #f4c95d;
     outline-offset: 3px;
 }
@@ -523,6 +526,78 @@ main a[href="/login"]:focus-visible {
     color: #0c5460;
     background-color: #d1ecf1;
     border-color: #bee5eb;
+}
+
+/* ==============================
+   Dashboard Card
+   ============================== */
+
+.dashboard-form h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #173f35;
+}
+
+.dashboard-form p {
+    margin: 15px 0;
+    padding: 12px;
+    background-color: #f4f7f5;
+    border-radius: 6px;
+    color: #263238;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-form strong {
+    color: #173f35;
+}
+
+
+/* ==============================
+   My Dashboard Link (Home Page)
+   ============================== */
+
+.dashboard-link-container {
+    max-width: 750px;
+    padding: 0 35px;
+}
+
+.dashboard-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #173f35;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+
+/* ==============================
+   Responsive Dashboard Styles
+   ============================== */
+
+@media (max-width: 600px) {
+    .dashboard-form {
+        margin: 20px 12px;
+        padding: 24px 18px;
+    }
+
+    .dashboard-link-container {
+        padding: 0 18px;
+    }
+}
+
+
+/* ==============================
+   Reduced Motion Accessibility
+   ============================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard-link {
+        transition: none;
+    }
 }
 
 
