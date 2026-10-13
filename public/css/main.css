@@ -284,7 +284,8 @@ main form[action^="/assign-categories/"],
 main form[action^="/edit-project/"],
 main form[action="/new-category"],
 main form[action^="/edit-category/"],
-main form[action="/register"] {
+main form[action="/register"],
+main form[action="/login"] {
     max-width: 750px;
     margin: 30px auto;
     padding: 35px;
@@ -301,7 +302,8 @@ main form[action^="/assign-categories/"],
 main form[action^="/edit-project/"] .form-group,
 main form[action="/new-category"] .form-group,
 main form[action^="/edit-category/"] .form-group,
-main form[action="/register"] .form-group {
+main form[action="/register"] .form-group,
+main form[action="/login"] .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -315,7 +317,8 @@ main form[action^="/assign-categories/"] label,
 main form[action^="/edit-project/"] label,
 main form[action="/new-category"] label,
 main form[action^="/edit-category/"] label,
-main form[action="/register"] label {
+main form[action="/register"] label,
+main form[action="/login"] label {
     color: #173f35;
     font-weight: 600;
 }
@@ -332,7 +335,8 @@ main form[action^="/edit-project/"] textarea,
 main form[action^="/edit-project/"] select,
 main form[action="/new-category"] input,
 main form[action^="/edit-category/"] input,
-main form[action="/register"] input {
+main form[action="/register"] input,
+main form[action="/login"] input {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #cbd5cf;
@@ -364,7 +368,8 @@ main form[action^="/edit-project/"] input:focus,
 main form[action^="/edit-project/"] textarea:focus,
 main form[action="/new-category"] input:focus,
 main form[action^="/edit-category/"] input:focus,
-main form[action="/register"] input:focus {
+main form[action="/register"] input:focus,
+main form[action="/login"] input:focus {
     outline: none;
     border-color: #2d6a58;
     box-shadow: 0 0 0 3px rgba(45, 106, 88, 0.15);
@@ -377,7 +382,8 @@ main form[action^="/assign-categories/"] button[type="submit"],
 main form[action^="/edit-project/"] button[type="submit"],
 main form[action="/new-category"] button[type="submit"],
 main form[action^="/edit-category/"] button[type="submit"],
-main form[action="/register"] button[type="submit"] {
+main form[action="/register"] button[type="submit"],
+main form[action="/login"] button[type="submit"] {
     display: inline-block;
     padding: 12px 24px;
     border: 2px solid #173f35;
@@ -398,7 +404,8 @@ main form[action^="/assign-categories/"] button[type="submit"]:hover,
 main form[action^="/edit-project/"] button[type="submit"]:hover,
 main form[action="/new-category"] button[type="submit"]:hover,
 main form[action^="/edit-category/"] button[type="submit"]:hover,
-main form[action="/register"] button[type="submit"]:hover {
+main form[action="/register"] button[type="submit"]:hover,
+main form[action="/login"] button[type="submit"]:hover {
     background-color: #2d6a58;
     border-color: #2d6a58;
 }
@@ -410,7 +417,8 @@ main form[action^="/assign-categories/"] button[type="submit"]:focus-visible,
 main form[action^="/edit-project/"] button[type="submit"]:focus-visible,
 main form[action="/new-category"] button[type="submit"]:focus-visible,
 main form[action^="/edit-category/"] button[type="submit"]:focus-visible,
-main form[action="/register"] button[type="submit"]:focus-visible {
+main form[action="/register"] button[type="submit"]:focus-visible,
+main form[action="/login"] button[type="submit"]:focus-visible {
     outline: 3px solid #f4c95d;
     outline-offset: 3px;
 }
@@ -440,7 +448,8 @@ main a[href^="/edit-project/"],
 main a[href^="/assign-categories/"],
 main a[href="/new-category"],
 main a[href^="/edit-category/"],
-main a[href="/register"] {
+main a[href="/register"],
+main a[href="/login"] {
     display: inline-block;
     padding: 12px 20px;
     margin: 8px 5px;
@@ -462,7 +471,8 @@ main a[href^="/edit-project/"]:hover,
 main a[href^="/assign-categories/"]:hover,
 main a[href="/new-category"]:hover,
 main a[href^="/edit-category/"]:hover,
-main a[href="/register"]:hover {
+main a[href="/register"]:hover,
+main a[href="/login"]:hover {
     background-color: #2d6a58;
     border-color: #2d6a58;
     color: #ffffff;
@@ -476,7 +486,8 @@ main a[href^="/edit-project/"]:focus-visible,
 main a[href^="/assign-categories/"]:focus-visible,
 main a[href="/new-category"]:focus-visible,
 main a[href^="/edit-category/"]:focus-visible,
-main a[href="/register"]:focus-visible {
+main a[href="/register"]:focus-visible,
+main a[href="/login"]:focus-visible {
     outline: 3px solid #f4c95d;
     outline-offset: 3px;
 }
@@ -593,7 +604,9 @@ a:focus-visible {
     main form[action^="/edit-category/"] input,
     main form[action^="/edit-category/"] button[type="submit"],
     main form[action="/register"] input,
-    main form[action="/register"] button[type="submit"] {
+    main form[action="/register"] button[type="submit"],
+    main form[action="/login"] input,
+    main form[action="/login"] button[type="submit"] {
         transition: none;
     }
 }
@@ -759,7 +772,8 @@ a:focus-visible {
     main form[action^="/edit-project/"],
     main form[action="/new-category"],
     main form[action^="/edit-category/"],
-    main form[action="/register"] {
+    main form[action="/register"],
+    main form[action="/login"] {
         padding: 22px 18px;
     }
     main form[action="/new-organization"] button[type="submit"],
@@ -769,7 +783,8 @@ a:focus-visible {
     main form[action^="/edit-project/"] button[type="submit"],
     main form[action="/new-category"] button[type="submit"],
     main form[action^="/edit-category/"] button[type="submit"],
-        main form[action="/register"] button[type="submit"] {
+    main form[action="/register"] button[type="submit"],
+    main form[action="/login"] button[type="submit"] {
         width: 100%;
         min-height: 48px;
     }
