@@ -71,10 +71,14 @@ const processLogout = async (req, res) => {
 };
 
 const requireLogin = (req, res, next) => {
+    console.log("requireLogin middleware reached");
+    console.log("Session user:", req.session?.user ?? "Not logged in");
+
     if (!req.session || !req.session.user) {
         req.flash("error", "You must be logged in to access that page.");
         return res.redirect("/login");
     }
+
     next();
 };
 

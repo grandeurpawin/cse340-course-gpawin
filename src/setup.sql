@@ -5,7 +5,7 @@ name VARCHAR(150) NOT NULL,
 description TEXT NOT NULL,
 contact_email VARCHAR(255) NOT NULL,
 logo_filename VARCHAR(255) NOT NULL
-)
+);
 
 INSERT INTO organization (name, description, contact_email, logo_filename)
 VALUES
@@ -162,7 +162,7 @@ CREATE TABLE roles (
     role_id SERIAL PRIMARY KEY,
     role_name VARCHAR(50) UNIQUE NOT NULL,
     role_description TEXT
- )
+ );
 
  INSERT INTO roles (role_name, role_description)
 VALUES
