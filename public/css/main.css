@@ -601,6 +601,8 @@ main a[href="/login"]:focus-visible,
 }
 
 
+
+
 /* =========================================
    FOOTER
    ========================================= */
@@ -875,5 +877,250 @@ a:focus-visible {
 
     footer p {
         font-size: 0.9rem;
+    }
+}
+
+
+/* =========================================
+   PROFESSIONAL DESIGN ENHANCEMENTS
+   CSE 340 Service Network
+   ========================================= */
+
+/* Consistent colors and styling */
+:root {
+    --color-primary: #173f35;
+    --color-primary-hover: #2d6a58;
+    --color-accent: #d9a441;
+    --color-background: #f4f7f5;
+    --color-surface: #ffffff;
+    --color-text: #263238;
+    --color-border: #dce5df;
+    --shadow-card: 0 4px 14px rgba(23, 63, 53, 0.08);
+    --shadow-card-hover: 0 8px 22px rgba(23, 63, 53, 0.13);
+    --radius-card: 12px;
+}
+
+/* Improve readability */
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    padding-top: 48px;
+    padding-bottom: 64px;
+}
+
+h1 {
+    letter-spacing: -0.035em;
+}
+
+h2,
+h3 {
+    line-height: 1.35;
+}
+
+a {
+    text-underline-offset: 3px;
+}
+
+/* Consistent button styling */
+main button,
+.volunteer-signup button,
+.volunteer-project button {
+    min-height: 44px;
+    padding: 11px 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 7px;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+main button:hover,
+.volunteer-signup button:hover,
+.volunteer-project button:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+}
+
+main button:active,
+.volunteer-signup button:active,
+.volunteer-project button:active {
+    transform: translateY(1px);
+}
+
+main button:focus-visible,
+.volunteer-signup button:focus-visible,
+.volunteer-project button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* Project listing cards */
+main>ul>li {
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-primary-hover);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+main>ul>li:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+}
+
+main>ul>li a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+main>ul>li a:hover {
+    color: var(--color-primary-hover);
+}
+
+/* Volunteer signup section on project details */
+.volunteer-signup {
+    margin: 32px 0;
+    padding: 28px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-top: 5px solid var(--color-accent);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.volunteer-signup h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.volunteer-signup p:last-child {
+    margin-bottom: 0;
+}
+
+.volunteer-signup form {
+    margin: 16px 0 0;
+}
+
+.volunteer-signup a:not([href="/login"]) {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.volunteer-signup a[href="/login"] {
+    color: var(--color-primary);
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* Dashboard volunteer project list */
+.volunteer-projects {
+    margin: 36px 0;
+}
+
+.volunteer-projects>h2 {
+    margin-bottom: 20px;
+}
+
+.volunteer-project {
+    margin: 0 0 18px;
+    padding: 24px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-primary-hover);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.2s ease;
+}
+
+.volunteer-project:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+.volunteer-project h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.volunteer-project h3 a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.volunteer-project h3 a:hover {
+    text-decoration: underline;
+}
+
+.volunteer-project p {
+    margin-bottom: 10px;
+}
+
+.volunteer-project form {
+    margin-top: 18px;
+}
+
+/* Dashboard profile card */
+.dashboard-form {
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+}
+
+.dashboard-form p {
+    border: 1px solid #e8eee9;
+}
+
+/* Organization logos */
+main ul li img {
+    border: 1px solid var(--color-border);
+}
+
+/* More comfortable mobile layouts */
+@media (max-width: 600px) {
+    main {
+        padding-top: 30px;
+        padding-bottom: 44px;
+    }
+
+    .volunteer-signup {
+        padding: 22px 18px;
+        margin: 24px 0;
+    }
+
+    .volunteer-project {
+        padding: 20px 16px;
+    }
+
+    .volunteer-project form button,
+    .volunteer-signup form button {
+        width: 100%;
+    }
+
+    main>ul>li:hover {
+        transform: none;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    main>ul>li,
+    .volunteer-project {
+        transition: none;
+    }
+
+    main>ul>li:hover {
+        transform: none;
     }
 }
